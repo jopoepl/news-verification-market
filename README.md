@@ -1,66 +1,32 @@
-## Foundry
+1. [OFF CHAIN] Unambiguous Claims Creator: Unambiguous Claims from Breaking News that can be resolved
+2. [ON CHAIN] Outcome Tokens Creator: Initialize the condition for a market and create outcome tokens based on the provided collateral using Gnosis CTF
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+✅ State Variables & Struct
+Condition struct with all necessary fields
+IConditionalTokens interface
+Mappings for conditions
+Oracle address
+Collateral token
+✅ Core Functions
+createCondition
+splitPosition
+mergePosition
+reportPayouts (oracle)
+redeemPositions
+✅ Admin Functions
+setOracle
+setCollateralToken
+pause/unpause
+✅ Getter Functions
+getCondition
+getConditionCollateral
+getUserPosition
+✅ Events
+OutcomeTokenSplit
+OutcomeTokenMerged
+ConditionResolved
+PayoutRedeemed
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+3. [ON CHAIN] Enable Trading Outcome Tokens: Allow participants with tokens to buy and sell outcome tokens using Seaport protocol
+4. [OFF CHAIN] Order Book: An off chain order book to match orders - saves gas costs - custom implementation
+5. [ON CHAIN] Dex Oracle: UMA's Optimistic Oracle to resolve markets after the specified period or event.
